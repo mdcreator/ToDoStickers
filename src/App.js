@@ -1,65 +1,53 @@
-import { useState } from 'react';
-
+import { useState, useEffect } from 'react';
 import Container from './components/Container';
-import Section from './components/Section';
-import FeedbackOptions from './components/FeedbackOptions';
-import Statistics from './components/Statistics';
-import Notification from './components/Notification';
+import TodosInputForm from './components/TodosInputForm';
+import TodosList from './components/TodosList';
 
-export default function App() {
-  const [good, setGood] = useState(0);
-  const [neutral, setNeutral] = useState(0);
-  const [bad, setBad] = useState(0);
+const App = () => {
+  const [todo, setTodo] = useState();
+  const [todos, setTodos] = useState(
+    JSON.parse(localStorage.getItem('items')) || [],
+  );
 
-  const options = { good, neutral, bad };
+  // useEffect(() => {
+  //   localStorage.setTodo('todos', JSON.stringify(todos));
+  // }, [todos]);
 
-  const handleButtonClick = option => {
-    switch (option) {
-      case 'good':
-        setGood(prev => prev + 1);
-        break;
-      case 'neutral':
-        setNeutral(prev => prev + 1);
-        break;
-      case 'bad':
-        setBad(prev => prev + 1);
-        break;
+  const handleSubmit = todo => {
+    if (todos.find(({ value }) => value === todo.value)) return;
 
-      default:
-        break;
-    }
+    setTodos(prevState => [todo, ...prevState]);
   };
 
-  const countTotalFeedback = () => {
-    return good + neutral + bad;
+  const handleDeleteTodo = id =>
+    setTodos(prevState => prevState.filter(todo => todo.id !== id));
+
+  const handleToggleTodo = id => {
+    setTodos(prevState =>
+      prevState.map(todo =>
+        todo.id === id
+          ? {
+              ...todo,
+              isDone: !todo.isDone,
+            }
+          : todo,
+      ),
+    );
   };
 
-  const countPositiveFeedbackPercentage = () => {
-    return Math.round((good * 100) / countTotalFeedback()) || 0;
-  };
   return (
-    <div>
+    <div className="todos">
       <Container>
-        <Section title="Please leave your feedback">
-          <FeedbackOptions
-            options={options}
-            onLeaveFeedback={handleButtonClick}
-          />
-        </Section>
-        <Section title="Statistics">
-          {countTotalFeedback() === 0 ? (
-            <Notification message="Please leave your feedback"></Notification>
-          ) : (
-            <Statistics
-              good={good}
-              neutral={neutral}
-              bad={bad}
-              total={countTotalFeedback()}
-              positivePercentage={countPositiveFeedbackPercentage()}
-            />
-          )}
-        </Section>
+        <h1>Todos</h1>
+        <TodosInputForm onSubmit={handleSubmit} />
+        <TodosList
+          todos={todos}
+          onDelete={handleDeleteTodo}
+          onToggle={handleToggleTodo}
+        />
       </Container>
     </div>
   );
-}
+};
+
+export default App;
