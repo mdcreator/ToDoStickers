@@ -1,17 +1,20 @@
-import { useState, useEffect } from 'react';
+import { useState } from 'react';
+import { createUseStyles } from 'react-jss';
 import Container from './components/Container';
 import TodosInputForm from './components/TodosInputForm';
 import TodosList from './components/TodosList';
 
+const useStyles = createUseStyles({
+  todosTitle: {
+    color: 'whitesmoke',
+  },
+});
+
 const App = () => {
-  const [todo, setTodo] = useState();
   const [todos, setTodos] = useState(
     JSON.parse(localStorage.getItem('items')) || [],
   );
-
-  // useEffect(() => {
-  //   localStorage.setTodo('todos', JSON.stringify(todos));
-  // }, [todos]);
+  const classes = useStyles();
 
   const handleSubmit = todo => {
     if (todos.find(({ value }) => value === todo.value)) return;
@@ -38,7 +41,7 @@ const App = () => {
   return (
     <div className="todos">
       <Container>
-        <h1>Todos</h1>
+        <h1 className={classes.todosTitle}>Todos</h1>
         <TodosInputForm onSubmit={handleSubmit} />
         <TodosList
           todos={todos}

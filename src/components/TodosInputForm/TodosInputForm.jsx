@@ -82,7 +82,6 @@ const TodosInputForm = ({ onSubmit }) => {
 
   const toggleForm = () => setShowForm(prevValue => !prevValue);
   const handleInputChange = e => setValue(e.target.value);
-  //   const handleKeyPress = e => keyPress(e);
   const handleUrgencyChange = e => setUrgency(e.target.value);
   const handleSubmit = e => {
     e.preventDefault();
@@ -106,13 +105,6 @@ const TodosInputForm = ({ onSubmit }) => {
     setShowForm(false);
   };
 
-  //   const keyPress = e => {
-  //     const code = e.keyCode || e.which;
-  //     if (code === 13) {
-  //       newTodo();
-  //     }
-  //   };
-
   return (
     <div className={classes.todosInputForm}>
       {showForm ? (
@@ -123,8 +115,8 @@ const TodosInputForm = ({ onSubmit }) => {
             value={value}
             placeholder="Enter something..."
             onChange={handleInputChange}
-            // onKeyPress={handleKeyPress}
           />
+
           <div className={classes.checkbox}>
             <span>urgency:</span>
             <label className={classes.label}>

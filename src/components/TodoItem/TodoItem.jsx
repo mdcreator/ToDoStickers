@@ -9,13 +9,46 @@ const useStyles = createUseStyles({
     position: 'absolute',
     cursor: 'move',
     width: '215px',
-    // color: 'black',
     padding: '1em',
     borderRadius: '5px',
   },
 
   value: {
     wordWrap: 'breakWord',
+    marginBottom: '4px',
+    textTransform: 'uppercase',
+    fontWeight: '600',
+    color: 'black',
+  },
+
+  urgency: {
+    wordWrap: 'breakWord',
+    marginBottom: '2px',
+    color: 'black',
+    letterSpacing: '2px',
+  },
+
+  date: {
+    marginBottom: '9px',
+    color: 'black',
+  },
+
+  actions: {
+    display: 'flex',
+  },
+
+  checkbox: {
+    marginRight: '4px',
+    width: '21px',
+    height: '21px',
+  },
+
+  button: {
+    border: 'none',
+    width: '20px',
+    height: '20px',
+    borderRadius: '2px',
+    backgroundColor: 'hotpink',
   },
 });
 
@@ -27,7 +60,6 @@ const TodoItem = ({
   const classes = useStyles();
   const color = randomColor({
     luminosity: 'light',
-    // hue: 'blue',
   });
 
   const formattedDate = moment(date).format('MMMM Do YYYY, h:mm:ss a');
@@ -43,10 +75,19 @@ const TodoItem = ({
     >
       <div className={classes.todoItem} style={{ backgroundColor: color }}>
         <p className={classes.value}>{value}</p>
-        <p>{urgency}</p>
-        <p>{formattedDate}</p>
-        <input type="checkbox" checked={isDone} onChange={handleToggle} />
-        <button onClick={handleDelete}>x</button>
+        <p className={classes.urgency}>{urgency}</p>
+        <p className={classes.date}>{formattedDate}</p>
+        <div className={classes.actions}>
+          <input
+            type="checkbox"
+            checked={isDone}
+            onChange={handleToggle}
+            className={classes.checkbox}
+          />
+          <button onClick={handleDelete} className={classes.button}>
+            x
+          </button>
+        </div>
       </div>
     </Draggable>
   );
