@@ -1,18 +1,18 @@
 {
   "files": {
-    "main.css": "/form-trello/static/css/main.00aa4b54.chunk.css",
-    "main.js": "/form-trello/static/js/main.c15eb138.chunk.js",
-    "main.js.map": "/form-trello/static/js/main.c15eb138.chunk.js.map",
-    "runtime-main.js": "/form-trello/static/js/runtime-main.fcebd9ac.js",
-    "runtime-main.js.map": "/form-trello/static/js/runtime-main.fcebd9ac.js.map",
-    "static/js/2.23f2378d.chunk.js": "/form-trello/static/js/2.23f2378d.chunk.js",
-    "static/js/2.23f2378d.chunk.js.map": "/form-trello/static/js/2.23f2378d.chunk.js.map",
-    "index.html": "/form-trello/index.html",
-    "static/css/main.00aa4b54.chunk.css.map": "/form-trello/static/css/main.00aa4b54.chunk.css.map",
-    "static/js/2.23f2378d.chunk.js.LICENSE.txt": "/form-trello/static/js/2.23f2378d.chunk.js.LICENSE.txt"
+    "main.css": "/todo-stickers/static/css/main.00aa4b54.chunk.css",
+    "main.js": "/todo-stickers/static/js/main.c15eb138.chunk.js",
+    "main.js.map": "/todo-stickers/static/js/main.c15eb138.chunk.js.map",
+    "runtime-main.js": "/todo-stickers/static/js/runtime-main.c4893900.js",
+    "runtime-main.js.map": "/todo-stickers/static/js/runtime-main.c4893900.js.map",
+    "static/js/2.23f2378d.chunk.js": "/todo-stickers/static/js/2.23f2378d.chunk.js",
+    "static/js/2.23f2378d.chunk.js.map": "/todo-stickers/static/js/2.23f2378d.chunk.js.map",
+    "index.html": "/todo-stickers/index.html",
+    "static/css/main.00aa4b54.chunk.css.map": "/todo-stickers/static/css/main.00aa4b54.chunk.css.map",
+    "static/js/2.23f2378d.chunk.js.LICENSE.txt": "/todo-stickers/static/js/2.23f2378d.chunk.js.LICENSE.txt"
   },
   "entrypoints": [
-    "static/js/runtime-main.fcebd9ac.js",
+    "static/js/runtime-main.c4893900.js",
     "static/js/2.23f2378d.chunk.js",
     "static/css/main.00aa4b54.chunk.css",
     "static/js/main.c15eb138.chunk.js"
