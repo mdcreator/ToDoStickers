@@ -1,18 +1,18 @@
 {
   "files": {
-    "main.css": "/todo-stickers/static/css/main.bfe689d1.chunk.css",
-    "main.js": "/todo-stickers/static/js/main.483060ef.chunk.js",
-    "main.js.map": "/todo-stickers/static/js/main.483060ef.chunk.js.map",
-    "runtime-main.js": "/todo-stickers/static/js/runtime-main.c4893900.js",
-    "runtime-main.js.map": "/todo-stickers/static/js/runtime-main.c4893900.js.map",
-    "static/js/2.23f2378d.chunk.js": "/todo-stickers/static/js/2.23f2378d.chunk.js",
-    "static/js/2.23f2378d.chunk.js.map": "/todo-stickers/static/js/2.23f2378d.chunk.js.map",
-    "index.html": "/todo-stickers/index.html",
-    "static/css/main.bfe689d1.chunk.css.map": "/todo-stickers/static/css/main.bfe689d1.chunk.css.map",
-    "static/js/2.23f2378d.chunk.js.LICENSE.txt": "/todo-stickers/static/js/2.23f2378d.chunk.js.LICENSE.txt"
+    "main.css": "/ToDoStickers/static/css/main.bfe689d1.chunk.css",
+    "main.js": "/ToDoStickers/static/js/main.483060ef.chunk.js",
+    "main.js.map": "/ToDoStickers/static/js/main.483060ef.chunk.js.map",
+    "runtime-main.js": "/ToDoStickers/static/js/runtime-main.069663f1.js",
+    "runtime-main.js.map": "/ToDoStickers/static/js/runtime-main.069663f1.js.map",
+    "static/js/2.23f2378d.chunk.js": "/ToDoStickers/static/js/2.23f2378d.chunk.js",
+    "static/js/2.23f2378d.chunk.js.map": "/ToDoStickers/static/js/2.23f2378d.chunk.js.map",
+    "index.html": "/ToDoStickers/index.html",
+    "static/css/main.bfe689d1.chunk.css.map": "/ToDoStickers/static/css/main.bfe689d1.chunk.css.map",
+    "static/js/2.23f2378d.chunk.js.LICENSE.txt": "/ToDoStickers/static/js/2.23f2378d.chunk.js.LICENSE.txt"
   },
   "entrypoints": [
-    "static/js/runtime-main.c4893900.js",
+    "static/js/runtime-main.069663f1.js",
     "static/js/2.23f2378d.chunk.js",
     "static/css/main.bfe689d1.chunk.css",
     "static/js/main.483060ef.chunk.js"
